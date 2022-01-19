@@ -1,4 +1,4 @@
-function helpReadable(number) {
+function helpReadable (number) {
   let num = parseInt(number);
   let out = "";
   switch (parseInt(num / 100)%10) {
@@ -93,7 +93,7 @@ function helpReadable(number) {
   return out;
 }
 
-function toReadable(number) {
+module.exports = function toReadable (number) {
   if(number == 0) {
     return "zero";
   }
