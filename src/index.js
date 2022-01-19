@@ -99,13 +99,13 @@ module.exports = function toReadable (number) {
   }
   let str1 = number.toString(10);
   if(str1.length < 4) {
-    return helpReadable(number.trim());
+    return helpReadable(number);
    } else if(str1.length < 7) {
      let out = helpReadable(number / 1000) + " thousand " + helpReadable(number%1000);
-     return out.trim();
+     return out;
    } else {
      let out = helpReadable(number / 1000000) + " million " + helpReadable(number/1000) ; if(helpReadable(number / 1000) != "") {out += ' thousand ' ;}
      out += helpReadable(number%1000);
-     return out.trim();
+     return out;
    }
   }
